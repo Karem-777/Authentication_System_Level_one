@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f3f6fb;
+        padding: 20px;
+    }
+
+    .login-container {
+        background: white;
+        width: 100%;
+        height: 500px;
+        max-width: 500px;
+        max-height: 500px;
+        padding: 25px 35px;
+        border-radius: 14px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-y: auto;
+    }
+
+    .login-header {
+        text-align: center;
+        margin-bottom: 15px;
+        flex-shrink: 0;
+    }
+
+    .lock-icon {
+        font-size: 30px;
+        background: #e7efff;
+        color: #3478f6;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: 0 auto 12px;
+    }
+
+    .login-header h1 {
+        color: #17243a;
+        margin-bottom: 6px;
+        font-size: 26px;
+    }
+
+    .login-header p {
+        color: #758198;
+        font-size: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 14px;
+    }
+
+    label {
+        display: block;
+        color: #526078;
+        font-weight: bold;
+        margin-bottom: 7px;
+        font-size: 14px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #d8dfeb;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+    input:focus {
+        border-color: #3478f6;
+    }
+
+    .options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+
+    .remember {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: #526078;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+
+    .remember input {
+        width: 15px;
+        height: 15px;
+    }
+
+    a {
+        color: #3478f6;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #3478f6;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+        flex-shrink: 0;
+    }
+
+    button:hover {
+        background: #245ed0;
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #758198;
+        margin: 16px 0;
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+
+    .divider::before,
+    .divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #dfe5ef;
+    }
+
+    .signup {
+        text-align: center;
+        color: #758198;
+        font-size: 13px;
+        padding-bottom: 3px;
+        flex-shrink: 0;
+    }
+
+    .signup a {
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+    #message {
+        margin-top: 8px;
+        text-align: center;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 480px) {
+        .login-container {
+            padding: 22px 20px;
+        }
+
+        .login-header h1 {
+            font-size: 24px;
+        }
+
+        .options {
+            font-size: 11px;
+        }
+    }
+
+    @media (max-height: 550px) {
+        body {
+            align-items: flex-start;
+        }
+
+        .login-container {
+            height: 500px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-header">
+            <div class="lock-icon">🔒</div>
+            <h1>Welcome Back</h1>
+            <p>Please sign in to your account</p>
+        </div>
+
+        <form id="loginForm">
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="you@example.com"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                    minlength="8"
+                >
+            </div>
+
+            <div class="options">
+                <label class="remember">
+                    <input type="checkbox" id="remember">
+                    Remember me
+                </label>
+
+                <a href="#" id="forgotPassword">Forgot password?</a>
+            </div>
+
+            <button type="submit">Sign In</button>
+
+            <p id="message" role="status"></p>
+
+        </form>
+
+        <div class="divider">or</div>
+
+        <div class="signup">
+            Don't have an account?
+            <a href="#" id="signupLink">Sign Up</a>
+        </div>
+
+    </div>
+
+    <!-- <script>
+        const loginForm = document.getElementById("loginForm");
+        const message = document.getElementById("message");
+
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            message.style.color = "#3478f6";
+            message.textContent =
+                "Form submitted. Connect a backend to authenticate your account.";
+
+            console.log("Email entered:", email);
+
+            // This is only a frontend demonstration.
+            // Never authenticate users using client-side code alone.
+        });
+
+        document.getElementById("forgotPassword")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                message.style.color = "#3478f6";
+                message.textContent =
+                    "Password recovery requires a backend implementation.";
+            });
+
+        document.getElementById("signupLink")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                message.style.color = "#3478f6";
+                message.textContent =
+                    "You can create a separate registration page.";
+            });
+    </script> -->
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f6fb;
+    padding: 20px;
+}
+
+.login-container {
+    background: white;
+    width: 500px;
+    height: 500px;
+    padding: 18px 28px;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.lock-icon {
+    font-size: 24px;
+    background: #e7efff;
+    color: #3478f6;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 6px;
+}
+
+.login-header h1 {
+    color: #17243a;
+    margin-bottom: 3px;
+    font-size: 21px;
+}
+
+.login-header p {
+    color: #758198;
+    font-size: 12.5px;
+}
+
+#signupForm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 9px;
+}
+
+label {
+    display: block;
+    color: #526078;
+    font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 12.5px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 8px 11px;
+    border: 1px solid #d8dfeb;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3478f6;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #3478f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 2px;
+}
+
+button[type="submit"]:hover {
+    background: #245ed0;
+}
+
+button[type="submit"]:disabled {
+    background: #a0b4e0;
+    cursor: not-allowed;
+}
+
+#message {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 12px;
+    min-height: 16px;
+}
+
+.success {
+    color: #0a7b34;
+}
+
+.error {
+    color: #d93025;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #758198;
+    margin: 10px 0 8px;
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #dfe5ef;
+}
+
+.signup {
+    text-align: center;
+    color: #758198;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.signup a {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #3478f6;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 55px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #3478f6;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 3px 6px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.toggle-password:hover {
+    background: #e7efff;
+}

@@ -1,0 +1,36 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f6fb;
+    margin: 0;
+    padding: 20px;
+}
+
+.welcome-container {
+    text-align: center;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    max-width: 450px;
+    width: 100%;
+}
+
+.welcome-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.welcome-container h1 {
+    color: #17243a;
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.welcome-container p {
+    color: #758198;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
